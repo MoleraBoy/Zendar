@@ -1,0 +1,70 @@
+    /* Alguns Rests */
+    
+    * {
+        margin: 0;
+        padding: 0;
+        font-size: 100;
+        border: none;
+        outline: none;
+        font-weight: 300;
+        box-sizing: border-box;
+        font-family: var(--font-secundary);
+    }
+    /* Root */
+    
+     :root {
+        --font-primary: 'Nanum Gothic';
+        --font-secundary: 'Raleway';
+        --font-action: 'Roboto Condensed';
+    }
+    /* Textos */
+    
+    h1 {
+        font-family: var(--font-primary);
+    }
+    
+    h2 {
+        font-family: var(--font-secundary);
+    }
+    
+    h3 {
+        font-family: var(--font-secundary);
+    }
+    
+    h4 {
+        font-family: var(--font-secundary);
+    }
+    
+    h5 {
+        font-family: var(--font-secundary);
+    }
+    
+    h6 {
+        font-family: var(--font-secundary);
+    }
+    
+    a {
+        font-family: var(--font-action);
+    }
+    
+    span {
+        font-family: var(--font-action);
+    }
+    
+    button {
+        font-family: var(--font-action);
+    }
+    /* Body */
+    
+    body h1 {
+        background-color: red;
+        font-family: var(--font-primary);
+    }
+    
+    body h2 {
+        font-family: var(--font-secundary);
+    }
+    
+    body h3 {
+        font-family: var(--font-action);
+    }
