@@ -1,4 +1,4 @@
-# Zemdar
+# Zendar
 Site de RPG
 
 ## Tarefas
