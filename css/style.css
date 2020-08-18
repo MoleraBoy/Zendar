@@ -1,70 +1,186 @@
-    /* Alguns Rests */
-    
-    * {
-        margin: 0;
-        padding: 0;
-        font-size: 100;
-        border: none;
-        outline: none;
-        font-weight: 300;
-        box-sizing: border-box;
-        font-family: var(--font-secundary);
+/* Reset básico */
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    text-decoration: none;
+}
+
+.hamburger {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    border-color: rgb(0, 0, 0);
+}
+
+
+/* Root  */
+
+:root {
+    --font-primary: 'Baloo Tamma 2';
+    --font-secundary: 'Montserrat';
+    --font-action: 'Roboto';
+    --color-primary: rgb(197, 197, 0);
+    --color-secundary: rgb(240, 255, 157);
+    --color-action: rgba(0, 0, 0, 0.685);
+    --color-menu: #005;
+}
+
+
+/* Formatação */
+
+h1 {
+    font-family: var(--font-primary);
+    text-shadow: .3rem .4rem 0.125rem rgba(0, 0, 0, 0.123);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: var(--font-secundary);
+    text-shadow: .3rem .4rem 0.125rem rgba(0, 0, 0, 0.123);
+}
+
+a,
+button,
+span {
+    font-family: var(--font-action);
+    text-shadow: .3rem .4rem 0.125rem rgba(0, 0, 0, 0.123);
+}
+
+button,
+img {
+    box-shadow: rgba(0, 0, 0, .35);
+}
+
+
+/* Cabess */
+
+header {
+    background-color: var(--color-menu);
+    font-weight: 400;
+}
+
+.cabess label {
+    color: var(--color-primary);
+    font-size: 25px;
+    padding: 5px 10px;
+    width: 20px;
+    border-right: 1px solid var(--color-primary);
+    display: none;
+}
+
+.cabess label:hover {
+    background-color: var(--color-secundary);
+    color: var(--color-action);
+}
+
+
+/* Menu */
+
+.menu ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu ul a {
+    color: var(--color-primary);
+    padding: 15px;
+    display: block;
+    font-size: 1.4rem;
+    border-right: 1px solid var(--color-primary);
+    ;
+}
+
+.menu ul a:hover {
+    background-color: var(--color-secundary);
+    text-shadow: .3rem .4rem 0.125rem rgba(0, 0, 0, 0.158);
+    border-right: 1px solid var(--color-primary);
+    color: var(--color-action);
+}
+
+#btn-menu {
+    display: none;
+}
+
+
+/* Background  */
+
+.bg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.685);
+}
+
+.bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    animation: zoom 25s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1.3);
     }
-    /* Root */
-    
-     :root {
-        --font-primary: 'Nanum Gothic';
-        --font-secundary: 'Raleway';
-        --font-action: 'Roboto Condensed';
+    100% {
+        transform: scale(1);
     }
-    /* Textos */
-    
-    h1 {
-        font-family: var(--font-primary);
+}
+
+
+/* Celulares */
+
+@media screen and (min-width: 768px) {
+    .cabess label {
+        display: block;
     }
-    
-    h2 {
-        font-family: var(--font-secundary);
+    .hamburger {
+        width: 100%;
     }
-    
-    h3 {
-        font-family: var(--font-secundary);
+    .menu ul {
+        position: absolute;
+        background-color: var(--color-menu);
+        width: 20%;
+        flex-direction: column;
+        border-bottom: 1px solid var(--color-primary);
+        border-top: 1px solid var(--color-primary);
+        margin-left: -70%;
+        transition: all .9s;
+        z-index: 100;
     }
-    
-    h4 {
-        font-family: var(--font-secundary);
+    .menu ul a {
+        border-bottom: 1px solid var(--color-primary);
     }
-    
-    h5 {
-        font-family: var(--font-secundary);
+    #btn-menu:checked~.menu ul {
+        margin-left: 0;
     }
-    
-    h6 {
-        font-family: var(--font-secundary);
+}
+
+
+/* Tablets */
+
+@media screen and (min-width: 1024px) {
+    .hamburger {
+        width: 100%;
     }
-    
-    a {
-        font-family: var(--font-action);
+}
+
+
+/* Desktops */
+
+@media screen and (min-width: 1350px) {
+    .hamburger {
+        width: 100%;
     }
-    
-    span {
-        font-family: var(--font-action);
-    }
-    
-    button {
-        font-family: var(--font-action);
-    }
-    /* Body */
-    
-    body h1 {
-        background-color: red;
-        font-family: var(--font-primary);
-    }
-    
-    body h2 {
-        font-family: var(--font-secundary);
-    }
-    
-    body h3 {
-        font-family: var(--font-action);
-    }
+}
