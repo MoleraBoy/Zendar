@@ -26,7 +26,7 @@
     --color-primary: rgb(197, 197, 0);
     --color-secundary: rgb(240, 255, 157);
     --color-action: rgba(0, 0, 0, 0.685);
-    --color-menu: #005;
+    --color-menu: #0f0c20;
 }
 
 
@@ -57,6 +57,21 @@ span {
 button,
 img {
     box-shadow: rgba(0, 0, 0, .35);
+}
+
+
+/* Cores */
+
+.azul {
+    background: #0f0c29;
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to left, #24243e, #302b63, #0f0c29);
+}
+
+.amarelo {
+    background: #544a7d;
+    background: -webkit-linear-gradient(to right, #ffd452, #544a7d);
+    background: linear-gradient(to right, #ffd452, #544a7d);
 }
 
 
@@ -109,6 +124,15 @@ header {
     display: none;
 }
 
+.social {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social li {
+    border-left: 1px solid var(--color-primary);
+}
+
 
 /* Background  */
 
@@ -136,6 +160,29 @@ header {
     100% {
         transform: scale(1);
     }
+}
+
+
+/* Home */
+
+.home {
+    position: absolute;
+    z-index: 80;
+    left: 74px;
+    bottom: 50%;
+    background: #0f0c2965;
+    background: -webkit-linear-gradient(to right, #24243e5d, #302b635d, #0f0c2969);
+    background: linear-gradient(to left, #24243e5d, #302b6369, #0f0c2956);
+    box-shadow: rgba(0, 0, 0, 0.466);
+    font-size: 1.8rem;
+    border-radius: 2%;
+    padding: 0 5% 0 5%;
+}
+
+.home h1 {
+    text-align: center;
+    color: var(--color-primary);
+    opacity: .8;
 }
 
 
