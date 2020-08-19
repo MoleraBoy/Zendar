@@ -210,13 +210,10 @@ header label {
         left: 0px;
         bottom: 125px;
         font-size: 1.8rem;
-        border-radius: 2%;
-        padding: 0 5% 0 5%;
     }
     .home h1 {
         text-align: center;
         color: var(--color-primary);
-        opacity: .8;
     }
 }
 
@@ -249,17 +246,31 @@ header label {
 
 /* Tablets */
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1350) {
     .hamburger {
         width: 100%;
+    }
+    .home {
+        position: absolute;
+        z-index: 80;
+        left: 0px;
+        bottom: 230px;
+        font-size: 1.8rem;
     }
 }
 
 
 /* Desktops */
 
-@media screen and (min-width: 1350px) {
+@media screen and (min-width:1440px) {
     .hamburger {
         width: 100%;
+    }
+    .home {
+        position: absolute;
+        z-index: 80;
+        left: 70px;
+        bottom: 260px;
+        font-size: 1.8rem;
     }
 }
