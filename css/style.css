@@ -19,7 +19,7 @@
 
 /* Root  */
 
-:root {
+ :root {
     --font-primary: 'Baloo Tamma 2';
     --font-secundary: 'Montserrat';
     --font-action: 'Roboto';
@@ -98,6 +98,10 @@ header {
 
 
 /* Menu */
+
+header label {
+    cursor: pointer;
+}
 
 .menu ul {
     display: flex;
@@ -187,6 +191,34 @@ header {
 
 
 /* Celulares */
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    header {
+        font-weight: 400;
+    }
+    .menu ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .menu ul a {
+        padding: 7px;
+        font-size: 1.4rem;
+    }
+    .home {
+        position: absolute;
+        z-index: 80;
+        left: 0px;
+        bottom: 125px;
+        font-size: 1.8rem;
+        border-radius: 2%;
+        padding: 0 5% 0 5%;
+    }
+    .home h1 {
+        text-align: center;
+        color: var(--color-primary);
+        opacity: .8;
+    }
+}
 
 @media screen and (min-width: 768px) {
     .cabess label {
